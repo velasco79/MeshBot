@@ -1,0 +1,6 @@
+bot.log
+mesh_inbox.jsonl
+aprs_config.json
+__pycache__/
+*.pyc
+.pytest_cache/
