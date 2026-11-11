@@ -43,8 +43,5 @@
 
 ## Referências
 
-- Planos de implementacao: ver secoes de decisoes deste documento; historico completo no git log —
-  `2026-10-18_125621` (mestre), `2026-10-18_130822` (Etapa 1),
-  `2026-10-18_132442` (Etapa 2 / pesquisa)
-- Skill operacional: `meshtastic-usb-bot` (Hermes)
+- Histórico completo de decisões e commits no `git log` deste repositório
 - Benchmarks: `docs/07-benchmark-comunidades.md`
