@@ -75,7 +75,9 @@ class MeshBot:
                 reply = handler(BotContext(), args)
             else:
                 reply = f"comando /{name} desconhecido (use /help)"
-            log.info("/%s de %s -> %r", name, frm, reply)
+            destino = "PM" if packet.get("to") == self.interface.myInfo.my_node_num \
+                else f"canal {packet.get('channel', 0)}"
+            log.info("/%s de %s [%s] -> %r", name, frm, destino, reply)
             self._reply(packet, reply)
         except Exception:
             log.exception("erro ao processar packet: %r", packet)

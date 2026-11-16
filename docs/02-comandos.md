@@ -10,6 +10,10 @@
 - **Anti-loop:** mensagens do próprio node são ignoradas.
 - **Onde responde:** chamado por PM → responde por PM; chamado em canal →
   responde no mesmo canal (LongFast = índice 0).
+- **PM não chega?** Se `is_unmessagable` estiver ativo no node (badge
+  "não monitorizado"), o app do remetente BLOQUEIA o envio de DM — o bot nunca
+  vê a mensagem. Os dois recursos são mutuamente exclusivos; para responder em
+  privado o flag deve ser `False` (`setOwner(is_unmessagable=False)`).
 - **Comando desconhecido:** `comando /xyz desconhecido` (sujeito ao rate limit).
 - **Teto de tamanho:** mono-linha até 60 caracteres; respostas multi-linha
   até 228 (1 pacote). Acima disso, `bot.py` quebra em blocos de ≤ 228 bytes
